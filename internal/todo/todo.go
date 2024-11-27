@@ -73,9 +73,9 @@ func (t *Todos) Print() {
 	table.SetHeaders("ID", "Title", "Status", "Created At", "Completed At")
 
 	for _, task := range t.Tasks {
-		completed := "✖"
+		completed := "×"
 		if task.Status {
-			completed = "✔"
+			completed = "√"
 		}
 		completedAt := "N/A"
 		if task.CompletedAt != nil {
